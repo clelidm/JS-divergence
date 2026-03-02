@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <iomanip> 
 
 #include <map>
 #include <set>
@@ -74,11 +75,11 @@ int main(int argc, char *argv[])
     cout << endl << "***************************************  ENTROPY:  ****************************************";
     cout << endl << "*******************************************************************************************" << endl;
 
-    cout << "S(D1) = " << entropy(Ps_1) << endl; 
-    cout << "S(D2) = " << entropy(Ps_2) << endl;
-    cout << "S(D_mean) = " << entropy(Ps_mean) << endl << endl;
+    cout << "S(D1) = " << setprecision(10)<< entropy(Ps_1) << endl; 
+    cout << "S(D2) = " << setprecision(10)<< entropy(Ps_2) << endl;
+    cout << "S(D_mean) = " << setprecision(10)<< entropy(Ps_mean) << endl << endl;
 
-    cout << "JS_div(D1,D2) = " << JS_div(Ps_1, Ps_2) << endl << endl;
+    cout << "JS_div(D1,D2) = " << setprecision(10)<< JS_div(Ps_1, Ps_2) << endl << endl;
 
     return 0;
 }
